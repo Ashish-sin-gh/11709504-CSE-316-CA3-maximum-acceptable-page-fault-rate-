@@ -30,10 +30,10 @@ double page_fault_rate(double PageFaultEmpty, double PageFaultMod, double MA , d
 
 userInput()
 {
-printf("\nEnter service Page Fault | Empty | in millisecond\n");
+printf("\nEnter Page Fault | Empty | in millisecond\n");
 	
 	scanf("%lf",&pageFaultEmpty);
-	printf("Enter Service Page Fault | Modified Page | in millisecond\n");
+	printf("Enter Page Fault | Modified Page | in millisecond\n");
 	
 scanf("%lf",&pageFaultModified);
 	printf("Enter Memory Access Time | in nanosecond\n");
