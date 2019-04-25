@@ -1,23 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<conio.h>
-
-double pageFaultEmpty;
-double pageFaultModified;
-double accessTime;
-double pageModTime;
-double effectiveAccessTime;
-double pageFaultRate;
-double PFE;
-double PFM;
-double tpm;
-
+//variable declaration
+double pageFaultEmpty, pageFaultModified,accessTime, pageModTime, effectiveAccessTime, pageFaultRate, PFE, PFM, tpm;
+//function to calculate page fault
 double page_fault_rate(double PageFaultEmpty, double PageFaultMod, double MA , double timesPages,double EA)
-{
-	double a;
-    double b;
+{ 
+ 	double a;
+    	double b;
 	double n;
-    double d;
+    	double d;
 	double PF;
 	a = (1- timesPages) * PageFaultEmpty;
 	b = timesPages * PageFaultMod;
@@ -27,8 +19,8 @@ double page_fault_rate(double PageFaultEmpty, double PageFaultMod, double MA , d
 	return PF;
 
 }
-
-userInput()
+//function to take user input
+void userInput()
 {
 printf("\nEnter Page Fault | Empty | in millisecond\n");
 	
@@ -58,8 +50,8 @@ scanf("%lf",&accessTime);
 	printf("\nMaximum Acceptable Page Fault rate: %.3e",pageFaultRate);
 }
 
-
-void main(){
+//main function
+int main(){
 	
 	int z;
 	
@@ -74,9 +66,9 @@ void main(){
 		printf("\n\n\n");
 		goto A;
 		break;
-		case 2:exit(0);
+		case 2:exit(1);
 	}
-	
+return 0;	
 }
 
 
